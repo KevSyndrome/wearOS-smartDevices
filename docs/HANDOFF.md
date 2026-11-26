@@ -154,20 +154,19 @@ Wearable), where Studio handles the companion installation. Do not spend more ti
 
 ## 8. What remains (TODO for next agent / user)
 
-- [ ] **Capture final watch screenshot** after the latest UI compaction (rebuild already done; reinstall
-      `wear-debug.apk`, launch, `adb exec-out screencap -p`). Current `watch_idle.png` is the pre-fix
-      version with clipped bottom text. Phone screenshot is current and good.
-- [ ] Insert real execution screenshots into the report. The four figure slots currently say
-      `[ INSERT SCREENSHOT HERE ]` (phone idle, watch ACTIVE, phone session saved, goal sync).
-      If only interface screenshots are available, state they are interface captures; the assignment
-      requires execution screenshots, so the user should capture them during the recorded demo.
-- [ ] Regenerate report after screenshots: `/tmp/reportvenv/bin/python /tmp/make_report.py`
-      (outputs to `docs/Final Project_FitPulse_KevinNoh_KennyPeralta.docx`).
+- [x] **Capture final watch screenshot** after the UI compaction (reinstalled `wear-debug.apk`,
+      relaunched, recaptured `docs/screenshots/watch_idle.png`; layout verified, no clipped text).
+- [x] Insert interface captures into the report: new section "Interface Captures (Running Emulators)"
+      with `phone_hub.png` and `watch_idle.png` (Figure A/B). Regenerated report (174 KB).
+- [ ] Replace the four `[ INSERT SCREENSHOT HERE ]` execution slots (phone idle, watch ACTIVE, phone
+      session saved, goal sync) with real captures taken during the demo. The assignment requires
+      execution evidence; interface captures alone are not enough.
+- [ ] Regenerate report after replacing execution captures:
+      `/tmp/reportvenv/bin/python /tmp/make_report.py`.
 - [ ] Review report facts: names, group TI91, repo URL, dates.
-- [ ] `git init` / add remote / commit / push to `https://github.com/KevSyndrome/wearOS-smartDevices.git`
-      (user explicitly asked to store changes there; check remote state first).
-- [ ] Ensure `local.properties`, `.gradle`, `build/` are NOT committed (`.gitignore` copied from TwoWay
-      covers this).
+- [x] `git init` / remote / commit / push completed: commit `e84deb1` on `main` of
+      `https://github.com/KevSyndrome/wearOS-smartDevices.git`. Only 58 source/doc files; `build/`,
+      `.gradle/`, `.kotlin/`, `local.properties`, `.idea/` ignored.
 - [ ] Demo video (max 3 min) using the script in section 9. Must show actual cross-device sync on the
       user's Android Studio-paired emulators.
 
