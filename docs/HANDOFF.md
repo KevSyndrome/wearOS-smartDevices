@@ -158,11 +158,11 @@ Wearable), where Studio handles the companion installation. Do not spend more ti
       relaunched, recaptured `docs/screenshots/watch_idle.png`; layout verified, no clipped text).
 - [x] Insert interface captures into the report: new section "Interface Captures (Running Emulators)"
       with `phone_hub.png` and `watch_idle.png` (Figure A/B). Regenerated report (174 KB).
-- [ ] Replace the four `[ INSERT SCREENSHOT HERE ]` execution slots (phone idle, watch ACTIVE, phone
+- [x] Replace the four `[ INSERT SCREENSHOT HERE ]` execution slots (phone idle, watch ACTIVE, phone
       session saved, goal sync) with real captures taken during the demo. The assignment requires
       execution evidence; interface captures alone are not enough.
-- [ ] Regenerate report after replacing execution captures:
-      `/tmp/reportvenv/bin/python /tmp/make_report.py`.
+- [x] Regenerate report after replacing execution captures:
+      `/tmp/reportvenv/bin/python docs/make_report.py`.
 - [ ] Review report facts: names, group TI91, repo URL, dates.
 - [x] `git init` / remote / commit / push completed: commit `e84deb1` on `main` of
       `https://github.com/KevSyndrome/wearOS-smartDevices.git`. Only 58 source/doc files; `build/`,

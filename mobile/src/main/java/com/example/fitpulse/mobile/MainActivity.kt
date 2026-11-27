@@ -319,7 +319,7 @@ class MainActivity : ComponentActivity(),
                 // create() builds wear://<node>/fitpulse/config/daily_goal for us.
                 val request = PutDataRequest.create(WearableConstants.PATH_DAILY_GOAL).apply {
                     data = map.toByteArray()
-                }
+                }.setUrgent() // without this the Data Layer may batch the sync for up to 30 min
                 dataClient.putDataItem(request).await()
             }.onSuccess {
                 statusMessage = "Goal ${formatSteps(steps)} steps synced to the watch"
